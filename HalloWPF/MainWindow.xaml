@@ -6,7 +6,103 @@
         xmlns:local="clr-namespace:HalloWPF"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525">
+    <!--<Canvas>
+        <Rectangle Canvas.Left="100"
+                   Canvas.Top="80"  
+                   Canvas.ZIndex="1"
+                   Height="80" Width="90"
+                   Fill="Blue" />
+
+        <Ellipse Canvas.Top="120"
+                 Canvas.Left="100"
+                 Canvas.ZIndex="0"
+                 Height="70" Width="50"
+                 Fill="Red" />
+    </Canvas>-->
+    <!--<StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Click Me!" />
+            <Button Content="Click Me!" />
+        </StackPanel>
+        <Button Content="Click Me!" />
+        <Button Content="Click Me!" />
+        <Button Content="Click Me!" />
+        <Button Content="Click Me!" />
+        <Button Content="Click Me!" />
+        <Button Content="Click Me!" />
+        <Button Content="Click Me!" />
+        <Button Content="Click Me!" />
+        <Button Content="Click Me!" />
+    </StackPanel>-->
+    <!--<WrapPanel Orientation="Vertical">
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+        <Button Content="Click Me" />
+    </WrapPanel>-->
+    <!--<ScrollViewer VerticalScrollBarVisibility="Visible"
+                  HorizontalScrollBarVisibility="Disabled">
+        <StackPanel>
+            <Button Content="Click Me!" />
+            <Button Content="Click Me!" />
+            <Button Content="Click Me!" />
+            <Button Content="Click Me!" />
+            <Button Content="Click Me!" />
+            <Button Content="Click Me!" />
+            <Button Content="Click Me!" />
+            <Button Content="Click Me!" />
+            <Button Content="Click Me!" />
+            <Button Content="Click Me!" />
+            <Button Content="Click Me!" />
+        </StackPanel>
+    </ScrollViewer>-->
+    <!--<Viewbox>
+        <Button>Hallo</Button>
+    </Viewbox>-->
+    <!--<DockPanel LastChildFill="True">
+        <Button DockPanel.Dock="Top" Content="Top" />
+        <Button DockPanel.Dock="Top" Content="Top" />
+        <Button DockPanel.Dock="Left" Content="Left" />
+        <Button DockPanel.Dock="Right" Content="Right " />
+        <Button DockPanel.Dock="Top" Content="Top" />
+        <Button DockPanel.Dock="Bottom" Content="Bottom" />
+        <Button Content="Last Child Fill = true" />
+    </DockPanel>-->
+    <!--<Border Height="200" Width="300"
+            BorderThickness="10"
+            CornerRadius="20 ">
+        <Border.BorderBrush>
+            <LinearGradientBrush>
+                <GradientStop Offset="0" Color="Red" />
+                <GradientStop Offset="0.5" Color="LightBlue" />
+                <GradientStop Offset="1" Color="Yellow" />
+            </LinearGradientBrush>
+        </Border.BorderBrush>
+        <StackPanel HorizontalAlignment="Center"
+                    VerticalAlignment="Center">
+            <TextBlock Text="Der Border" />
+        </StackPanel>
+    </Border>-->
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />  
+            <RowDefinition Height="*" />  
+        </Grid.RowDefinitions>            
+        <Grid.ColumnDefinitions>          
+            <ColumnDefinition />          
+            <ColumnDefinition />          
+            <ColumnDefinition />          
+        </Grid.ColumnDefinitions>
         
+        <Button Grid.Column="1" Content="Click Me"/>
+        <Button Grid.Column="1" Grid.Row="1" Content="Click Me"/>      
+        <Button Grid.Column="1" Grid.Row="2" Content="Click Me"/>
     </Grid>
 </Window>
