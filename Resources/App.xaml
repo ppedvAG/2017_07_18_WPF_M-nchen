@@ -1,0 +1,20 @@
+﻿<Application x:Class="Resources.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Resources"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Resources.Shared;component/MyColors.xaml" />
+
+                <ResourceDictionary>
+                    <SolidColorBrush x:Key="defaultBackgroundColor" Color="LightBlue" />
+                </ResourceDictionary>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+
+        <!--<ResourceDictionary Source="pack://application:,,,/YourAssembly;component/Subfolder/YourResou-->
+        <!--<SolidColorBrush x:Key="defaultBackgroundColor" Color="LightBlue" />-->
+    </Application.Resources>
+</Application>

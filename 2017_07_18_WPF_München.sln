@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LayoutContainerUebung", "La
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Controls", "Controls\Controls.csproj", "{C7A95B5D-377F-4281-A1FC-26F0FC5E8453}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resources", "Resources\Resources.csproj", "{D6A862F3-83C6-4376-BCCE-6113161432AE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resources.Shared", "Resources.Shared\Resources.Shared.csproj", "{C8CFB066-9C74-41CD-85C5-685463790D3F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{C7A95B5D-377F-4281-A1FC-26F0FC5E8453}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7A95B5D-377F-4281-A1FC-26F0FC5E8453}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7A95B5D-377F-4281-A1FC-26F0FC5E8453}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6A862F3-83C6-4376-BCCE-6113161432AE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6A862F3-83C6-4376-BCCE-6113161432AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6A862F3-83C6-4376-BCCE-6113161432AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6A862F3-83C6-4376-BCCE-6113161432AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8CFB066-9C74-41CD-85C5-685463790D3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8CFB066-9C74-41CD-85C5-685463790D3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8CFB066-9C74-41CD-85C5-685463790D3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8CFB066-9C74-41CD-85C5-685463790D3F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

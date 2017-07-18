@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Controls"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="800" Width="525">
     <Window.Resources>
         <Path x:Key="arrow" Data="M421.976,196.712L236.111,10.848C228.884,3.615,220.219,0,210.131,0c-9.9,0-18.464,3.615-25.697,10.848L163.023,32.26
 		c-7.234,6.853-10.85,15.418-10.85,25.697c0,10.277,3.616,18.842,10.85,25.697l83.653,83.937H45.677
@@ -77,6 +77,8 @@
         
 
         <TextBlock Text="http://www.flaticon.com/authors/dave-gandy" Margin="0 20 0 0" />
+
+        <Image Source="Images/freesample.jpg" />
     </StackPanel>
 
 
