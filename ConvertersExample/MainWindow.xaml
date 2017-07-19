@@ -1,0 +1,33 @@
+﻿<Window x:Class="ConvertersExample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:converters="clr-namespace:ConvertersExample.Converters"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:system="clr-namespace:System;assembly=mscorlib"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="525">
+    <Window.Resources>
+        
+        <x:Array x:Key="colors" Type="system:String">
+            <system:String>#ff006438</system:String>
+            <system:String>Orange</system:String>
+        </x:Array>
+        
+        <converters:BoolToBrushConverter x:Key="bool2BrushConverter" />
+    </Window.Resources>
+    
+    <StackPanel Margin="50">
+        <CheckBox Name="myCheckBox" 
+                  IsChecked="True"
+                  Content="Check me" 
+                  HorizontalAlignment="Center" />
+
+        <Rectangle Margin="0 20 0 0"
+                   Fill="{Binding ElementName=myCheckBox, Path=IsChecked,
+                                  ConverterParameter={StaticResource colors},
+                                  Converter={StaticResource bool2BrushConverter}}"
+                   Height="200" Width="200" />
+
+    </StackPanel>
+</Window>
