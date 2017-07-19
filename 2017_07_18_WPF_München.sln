@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Resources.Shared", "Resourc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Styles", "Styles\Styles.csproj", "{7A4E9F51-C0A2-47A8-AB36-9A21E2324CB1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Templates", "Templates\Templates.csproj", "{06FEF852-BF8F-45A3-B7B8-6A4D0A28ACC6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{7A4E9F51-C0A2-47A8-AB36-9A21E2324CB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7A4E9F51-C0A2-47A8-AB36-9A21E2324CB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7A4E9F51-C0A2-47A8-AB36-9A21E2324CB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{06FEF852-BF8F-45A3-B7B8-6A4D0A28ACC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{06FEF852-BF8F-45A3-B7B8-6A4D0A28ACC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{06FEF852-BF8F-45A3-B7B8-6A4D0A28ACC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{06FEF852-BF8F-45A3-B7B8-6A4D0A28ACC6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
