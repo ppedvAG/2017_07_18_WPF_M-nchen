@@ -23,6 +23,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RelativeSourceSelf", "Relat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RelativeSourceFindAncestor", "RelativeSourceFindAncestor\RelativeSourceFindAncestor.csproj", "{00791432-F2A8-445E-8535-D535101EE97B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RelativeSourceTemplatedParent", "RelativeSourceTemplatedParent\RelativeSourceTemplatedParent.csproj", "{3E465E18-23F6-403B-888A-699E9D45F3FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -69,6 +71,10 @@ Global
 		{00791432-F2A8-445E-8535-D535101EE97B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{00791432-F2A8-445E-8535-D535101EE97B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{00791432-F2A8-445E-8535-D535101EE97B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3E465E18-23F6-403B-888A-699E9D45F3FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3E465E18-23F6-403B-888A-699E9D45F3FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3E465E18-23F6-403B-888A-699E9D45F3FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3E465E18-23F6-403B-888A-699E9D45F3FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
