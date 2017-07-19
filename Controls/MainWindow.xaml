@@ -29,9 +29,7 @@
         </Menu>
         
         <CheckBox IsChecked="{x:Null}" Content="Click me" IsThreeState="True" />
-        <RadioButton Content="ABC" >
-            
-        </RadioButton>
+        <RadioButton Content="ABC" IsThreeState="True" />
         <RadioButton Content="ABC" />
         <RadioButton Content="ABC" />
 
@@ -51,10 +49,7 @@
         <ProgressBar IsIndeterminate="True" Height="80" RenderTransformOrigin="0.5,0.5">
             <ProgressBar.RenderTransform>
                 <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
                     <RotateTransform Angle="-45"/>
-                    <TranslateTransform/>
                 </TransformGroup>
             </ProgressBar.RenderTransform>
             <ProgressBar.Background>
@@ -78,8 +73,6 @@
 
         <TextBlock Text="http://www.flaticon.com/authors/dave-gandy" Margin="0 20 0 0" />
 
-        <Image Source="Images/freesample.jpg" />
+        <Image Source="Images/freesample.jpg"  Stretch="Uniform"/>
     </StackPanel>
-
-
 </Window>

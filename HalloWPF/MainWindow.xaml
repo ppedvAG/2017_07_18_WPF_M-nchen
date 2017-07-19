@@ -62,7 +62,7 @@
             <Button Content="Click Me!" />
         </StackPanel>
     </ScrollViewer>-->
-    <!--<Viewbox>
+    <!--<Viewbox Stretch="Fill">
         <Button>Hallo</Button>
     </Viewbox>-->
     <!--<DockPanel LastChildFill="True">
@@ -76,7 +76,7 @@
     </DockPanel>-->
     <!--<Border Height="200" Width="300"
             BorderThickness="10"
-            CornerRadius="20 ">
+            CornerRadius="20">
         <Border.BorderBrush>
             <LinearGradientBrush>
                 <GradientStop Offset="0" Color="Red" />
