@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RelativeSourcePreviousData"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvertersExample", "ConvertersExample\ConvertersExample.csproj", "{914563F1-17BF-48E3-8838-841C16CC2C6D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiValueConverters", "MultiValueConverters\MultiValueConverters.csproj", "{A5A130F1-48AD-43BD-B052-B70A39BF9A0A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{914563F1-17BF-48E3-8838-841C16CC2C6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{914563F1-17BF-48E3-8838-841C16CC2C6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{914563F1-17BF-48E3-8838-841C16CC2C6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5A130F1-48AD-43BD-B052-B70A39BF9A0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5A130F1-48AD-43BD-B052-B70A39BF9A0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5A130F1-48AD-43BD-B052-B70A39BF9A0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5A130F1-48AD-43BD-B052-B70A39BF9A0A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
