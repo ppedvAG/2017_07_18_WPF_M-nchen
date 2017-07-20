@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyProperties", "Dep
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validation", "Validation\Validation.csproj", "{14B633B2-8CFA-4E34-AF36-8654EB7DDD95}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Localization", "Localization\Localization.csproj", "{29986107-6B40-4D46-BA15-6CFFCB02487D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -123,6 +125,10 @@ Global
 		{14B633B2-8CFA-4E34-AF36-8654EB7DDD95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14B633B2-8CFA-4E34-AF36-8654EB7DDD95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14B633B2-8CFA-4E34-AF36-8654EB7DDD95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{29986107-6B40-4D46-BA15-6CFFCB02487D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29986107-6B40-4D46-BA15-6CFFCB02487D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29986107-6B40-4D46-BA15-6CFFCB02487D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29986107-6B40-4D46-BA15-6CFFCB02487D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
