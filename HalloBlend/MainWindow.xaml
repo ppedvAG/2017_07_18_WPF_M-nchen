@@ -1,0 +1,366 @@
+﻿<Window x:Class="HalloBlend.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:HalloBlend"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="ButtonStyle1" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <StackPanel HorizontalAlignment="Left" Margin="9,9,0,14.198" Orientation="Horizontal" Width="35.623" d:LayoutOverrides="Height">
+                                <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="Stretch" Margin="0,0,-0.001,0" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="Stretch" d:LayoutOverrides="Width"/>
+                                <Image Height="Auto" Source="http://lorempixel.com/400/200" IsEnabled="False" Margin="0,3.605,0,-5.145" Width="33.25"/>
+                            </StackPanel>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.MouseOver.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.MouseOver.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Storyboard x:Key="Storyboard1" AutoReverse="True" RepeatBehavior="Forever">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="rectangle">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="298"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="-57.333"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="rectangle">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="111.333"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:3" Value="113.333"/>
+            </DoubleAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point2)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0" Value="177.4516005017,184.444791122033"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="120.285184469012,98.1116179974519"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="126.952026356946,53.4449466874091"/>
+                <EasingPointKeyFrame KeyTime="0:0:3" Value="102.952026356946,51.4460282151191"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point3)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0" Value="159.951574144755,168.944762906915"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="102.785158112066,82.6115897823328"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="109.452,37.94491847229"/>
+                <EasingPointKeyFrame KeyTime="0:0:3" Value="85.4519999999999,35.946"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[5].(BezierSegment.Point1)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0" Value="142.45154778781,153.444734691795"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="85.285131755121,67.1115615672137"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="91.951973643055,22.4448902571708"/>
+                <EasingPointKeyFrame KeyTime="0:0:3" Value="67.9519736430549,20.4459717848808"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point2)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0" Value="173.451594477255,29.4439769715906"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="183.451930298888,70.1113497376003"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="181.452006024444,-21.2219380101007"/>
+                <EasingPointKeyFrame KeyTime="0:0:3" Value="246.118672691111,-41.2212543476861"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point3)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0" Value="169.451588452811,83.944212372947"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="179.451924274444,124.611585138957"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="177.452,33.2782973912557"/>
+                <EasingPointKeyFrame KeyTime="0:0:3" Value="242.118666666667,13.2789810536703"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[4].(BezierSegment.Point1)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0" Value="165.451582428366,138.444455774292"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="175.451918249999,179.111828540302"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="173.451993975555,87.7785407926013"/>
+                <EasingPointKeyFrame KeyTime="0:0:3" Value="238.118660642222,67.7792244550159"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point2)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0" Value="262.884589173084,216.942205447775"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="338.884684627822,163.942410092661"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="238.218093686711,172.60934474181"/>
+                <EasingPointKeyFrame KeyTime="0:0:3" Value="464.218093686711,198.60934474181"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point3)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0" Value="229.451828819706,146.944713827403"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="305.451924274444,93.9449184722901"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="204.785333333333,102.61185312144"/>
+                <EasingPointKeyFrame KeyTime="0:0:3" Value="430.785333333333,128.61185312144"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[3].(BezierSegment.Point1)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0" Value="231.951822584969,112.444562316457"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="307.951918039707,59.4447669613432"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="207.285327098596,68.1117016104926"/>
+                <EasingPointKeyFrame KeyTime="0:0:3" Value="433.285327098596,94.1117016104926"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point2)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0" Value="398.451943352282,142.444320152588"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="331.952039491948,139.611544977328"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="345.952115217504,174.945146293145"/>
+                <EasingPointKeyFrame KeyTime="0:0:3" Value="345.952115217504,174.945146293145"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point3)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0" Value="321.951828134778,149.444360314216"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="255.451924274444,146.611585138956"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="269.452,181.945186454773"/>
+                <EasingPointKeyFrame KeyTime="0:0:3" Value="269.452,181.945186454773"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[2].(BezierSegment.Point1)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0" Value="263.838260609417,174.60814494718"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="197.338356749083,171.77536977192"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="211.338432474639,207.108971087737"/>
+                <EasingPointKeyFrame KeyTime="0:0:3" Value="211.338432474639,207.108971087737"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point2)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0" Value="179.451613513937,272.444517440739"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="240.451826377218,257.778200505908"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="156.607611578185,259.628763906532"/>
+                <EasingPointKeyFrame KeyTime="0:0:3" Value="252.277135124677,259.806557429101"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point3)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0" Value="244.451711411163,235.944568740454"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="305.451924274444,221.278251805623"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="221.607709475411,223.128815206247"/>
+                <EasingPointKeyFrame KeyTime="0:0:3" Value="317.277233021903,223.306608728816"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[1].(BezierSegment.Point1)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0" Value="309.451809308388,199.44462004017"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="370.452022171669,184.778303105339"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="286.607807372636,186.628866505963"/>
+                <EasingPointKeyFrame KeyTime="0:0:3" Value="382.277330919128,186.806660028532"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[7].(BezierSegment.Point2)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0" Value="103.951819803027,165.444757826079"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="65.1186651605553,125.944899716105"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="127.785331827222,132.611364814168"/>
+                <EasingPointKeyFrame KeyTime="0:0:3" Value="127.785331827222,132.611364814168"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[7].(BezierSegment.Point3)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0" Value="104.951821309138,173.444776582264"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="66.1186666666665,133.94491847229"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="128.785333333333,140.611383570353"/>
+                <EasingPointKeyFrame KeyTime="0:0:3" Value="128.785333333333,140.611383570353"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[8].(BezierSegment.Point1)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0" Value="105.951822815249,181.444785338462"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="67.1186681727775,141.944927228489"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="129.785334839444,148.611392326552"/>
+                <EasingPointKeyFrame KeyTime="0:0:3" Value="129.785334839444,148.611392326552"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[6].(BezierSegment.Point2)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0" Value="73.4518238667124,181.444785338462"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="22.9843153806869,200.609680098488"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="75.7853367661408,131.444980705899"/>
+                <EasingPointKeyFrame KeyTime="0:0:3" Value="201.118670099474,110.778536436083"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[6].(BezierSegment.Point3)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0" Value="84.451820433905,171.944768690486"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="33.9843119478795,191.109663450511"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="86.7853333333334,121.944964057922"/>
+                <EasingPointKeyFrame KeyTime="0:0:3" Value="212.118666666667,101.278519788106"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[7].(BezierSegment.Point1)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0" Value="95.4518270011127,162.444752042508"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="44.9843185150872,181.609646802534"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="97.7853399005411,112.444947409945"/>
+                <EasingPointKeyFrame KeyTime="0:0:3" Value="223.118673233874,91.7785031401295"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[5].(BezierSegment.Point2)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0" Value="52.4514332378372,122.444668261572"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="-5.21490117046475,80.9448664201511"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="49.4519919633345,60.2779981848809"/>
+                <EasingPointKeyFrame KeyTime="0:0:3" Value="96.1186586300011,154.278467735968"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[5].(BezierSegment.Point3)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0" Value="58.4514412745027,149.44472031371"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="0.785106866200745,107.94491847229"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="55.452,87.2780502370198"/>
+                <EasingPointKeyFrame KeyTime="0:0:3" Value="102.118666666667,181.278519788106"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[6].(BezierSegment.Point1)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0" Value="64.4514503111697,176.444782365835"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="6.78511590286775,134.944980524414"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="61.452009036667,114.278112289144"/>
+                <EasingPointKeyFrame KeyTime="0:0:3" Value="108.118675703334,208.278581840231"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.StartPoint)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0" Value="107.95150582699,194.944626364792"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="126.785333810171,245.278251805623"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="72.9411185342996,192.462194125213"/>
+                <EasingPointKeyFrame KeyTime="0:0:3" Value="168.610642080792,192.639987647782"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[0].(BezierSegment.Point1)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0" Value="107.95150582699,194.944626364792"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="126.785333810171,245.278251805623"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="72.9411185342996,192.462194125213"/>
+                <EasingPointKeyFrame KeyTime="0:0:3" Value="168.610642080792,192.639987647782"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[9].(BezierSegment.Point2)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0" Value="107.95150582699,194.944626364792"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="126.785333810171,245.278251805623"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="72.9411185342996,192.462194125213"/>
+                <EasingPointKeyFrame KeyTime="0:0:3" Value="168.610642080792,192.639987647782"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[9].(BezierSegment.Point3)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0" Value="107.95150582699,194.944626364792"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="126.785333810171,245.278251805623"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="72.9411185342996,192.462194125213"/>
+                <EasingPointKeyFrame KeyTime="0:0:3" Value="168.610642080792,192.639987647782"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[8].(BezierSegment.Point2)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0" Value="78.4518213972531,192.944809175481"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="95.6186678403074,173.778236724801"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="14.9520011736404,173.111615643767"/>
+                <EasingPointKeyFrame KeyTime="0:0:3" Value="283.618667840307,137.111838040618"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[8].(BezierSegment.Point3)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0" Value="90.9518202236124,196.444824256304"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="108.118666666667,177.278251805623"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="27.452,176.611630724589"/>
+                <EasingPointKeyFrame KeyTime="0:0:3" Value="296.118666666666,140.61185312144"/>
+            </PointAnimationUsingKeyFrames>
+            <PointAnimationUsingKeyFrames Storyboard.TargetProperty="(Path.Data).(PathGeometry.Figures)[0].(PathFigure.Segments)[9].(BezierSegment.Point1)" Storyboard.TargetName="path">
+                <EasingPointKeyFrame KeyTime="0" Value="103.451829049987,199.944829337139"/>
+                <EasingPointKeyFrame KeyTime="0:0:1" Value="120.618675493041,180.778256886458"/>
+                <EasingPointKeyFrame KeyTime="0:0:2" Value="39.952008826374,180.111635805424"/>
+                <EasingPointKeyFrame KeyTime="0:0:3" Value="308.61867549304,144.111858202275"/>
+            </PointAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="ellipse">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="175.333"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="ellipse">
+                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-76.667"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[0].(GradientStop.Color)" Storyboard.TargetName="grid">
+                <EasingColorKeyFrame KeyTime="0" Value="#FFE28DF3"/>
+                <EasingColorKeyFrame KeyTime="0:0:1" Value="#FF8DF3B3"/>
+                <EasingColorKeyFrame KeyTime="0:0:2" Value="#FFF38D8D"/>
+                <EasingColorKeyFrame KeyTime="0:0:3" Value="#FF8DDEF3"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[4].(GradientStop.Color)" Storyboard.TargetName="grid">
+                <EasingColorKeyFrame KeyTime="0" Value="#FF31B6D9"/>
+                <EasingColorKeyFrame KeyTime="0:0:1" Value="#FFD9AE31"/>
+                <EasingColorKeyFrame KeyTime="0:0:2" Value="#FF58D931"/>
+                <EasingColorKeyFrame KeyTime="0:0:3" Value="#FFE061F1"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[2].(GradientStop.Color)" Storyboard.TargetName="grid">
+                <EasingColorKeyFrame KeyTime="0" Value="#FFDF2020"/>
+                <EasingColorKeyFrame KeyTime="0:0:1" Value="#FF20C0DF"/>
+                <EasingColorKeyFrame KeyTime="0:0:2" Value="#FFC020DF"/>
+                <EasingColorKeyFrame KeyTime="0:0:3" Value="#FF93DF20"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[3].(GradientStop.Color)" Storyboard.TargetName="grid">
+                <EasingColorKeyFrame KeyTime="0" Value="#FF9AED87"/>
+                <EasingColorKeyFrame KeyTime="0:0:1" Value="#FFED87E1"/>
+                <EasingColorKeyFrame KeyTime="0:0:2" Value="#FFEDC587"/>
+                <EasingColorKeyFrame KeyTime="0:0:3" Value="#FFED8795"/>
+            </ColorAnimationUsingKeyFrames>
+            <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(GradientBrush.GradientStops)[1].(GradientStop.Color)" Storyboard.TargetName="grid">
+                <EasingColorKeyFrame KeyTime="0" Value="White"/>
+                <EasingColorKeyFrame KeyTime="0:0:1" Value="#FFC5F9E2"/>
+                <EasingColorKeyFrame KeyTime="0:0:2" Value="#FFD1C5F9"/>
+                <EasingColorKeyFrame KeyTime="0:0:3" Value="#FFC5F9F3"/>
+            </ColorAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="myButton">
+            <BeginStoryboard Storyboard="{StaticResource Storyboard1}"/>
+        </EventTrigger>
+    </Window.Triggers>
+    <Grid x:Name="grid">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="437*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.956,0.075" StartPoint="0.165,0.812">
+                <GradientStop Color="#FFE78DF3" Offset="0.087"/>
+                <GradientStop Color="White" Offset="1"/>
+                <GradientStop Color="#FFDF2020" Offset="0.531"/>
+                <GradientStop Color="#FF9AED87" Offset="0.749"/>
+                <GradientStop Color="#FF31B6D9" Offset="0.305"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Rectangle x:Name="rectangle" Fill="#FFF4F4F5" HorizontalAlignment="Left" Margin="28,66,0,157" Stroke="Black" Width="96" Grid.Column="1" RenderTransformOrigin="0.5,0.5">
+            <Rectangle.Effect>
+                <BlurEffect Radius="60"/>
+            </Rectangle.Effect>
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+        <Ellipse x:Name="ellipse" Fill="#FFF4F4F5" Margin="174.5,77,177.5,157" Stroke="Black" Grid.Column="1" RenderTransformOrigin="0.5,0.5">
+            <Ellipse.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Ellipse.RenderTransform>
+        </Ellipse>
+        <Path x:Name="path" Fill="#FFF4F4F5" Margin="-33.452,33.054,36.107,38.101" Stroke="Black" Grid.Column="1">
+            <Path.Data>
+                <PathGeometry>
+                    <PathFigure IsClosed="True" StartPoint="107.95150582699,194.944626364792">
+                        <BezierSegment Point3="244.451711411163,235.944568740454" Point2="179.451613513937,272.444517440739" Point1="107.95150582699,194.944626364792"/>
+                        <BezierSegment Point3="321.951828134778,149.444360314216" Point2="398.451943352282,142.444320152588" Point1="309.451809308388,199.44462004017"/>
+                        <BezierSegment Point3="229.451828819706,146.944713827403" Point2="262.884589173084,216.942205447775" Point1="263.838260609417,174.60814494718"/>
+                        <BezierSegment Point3="169.451588452811,83.944212372947" Point2="173.451594477255,29.4439769715906" Point1="231.951822584969,112.444562316457"/>
+                        <BezierSegment Point3="159.951574144755,168.944762906915" Point2="177.4516005017,184.444791122033" Point1="165.451582428366,138.444455774292"/>
+                        <BezierSegment Point3="58.4514412745027,149.44472031371" Point2="52.4514332378372,122.444668261572" Point1="142.45154778781,153.444734691795"/>
+                        <BezierSegment Point3="84.451820433905,171.944768690486" Point2="73.4518238667124,181.444785338462" Point1="64.4514503111697,176.444782365835"/>
+                        <BezierSegment Point3="104.951821309138,173.444776582264" Point2="103.951819803027,165.444757826079" Point1="95.4518270011127,162.444752042508"/>
+                        <BezierSegment Point3="90.9518202236124,196.444824256304" Point2="78.4518213972531,192.944809175481" Point1="105.951822815249,181.444785338462"/>
+                        <BezierSegment Point3="107.95150582699,194.944626364792" Point2="107.95150582699,194.944626364792" Point1="103.451829049987,199.944829337139"/>
+                    </PathFigure>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+        <Button x:Name="myButton" Content="Button" HorizontalAlignment="Right" Height="41.158" Margin="0,57,64.5,0" VerticalAlignment="Top" Width="97.5" Style="{DynamicResource ButtonStyle1}" Grid.Column="1"/>
+
+    </Grid>
+</Window>
