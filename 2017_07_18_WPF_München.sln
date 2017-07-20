@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiValueConverters", "Mul
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertyTrigger", "PropertyTrigger\PropertyTrigger.csproj", "{99131227-8AC2-4A8A-BD0C-EF742F954E0F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTrigger", "DataTrigger\DataTrigger.csproj", "{55EE39FB-909C-434A-9460-427C10940443}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -99,6 +101,10 @@ Global
 		{99131227-8AC2-4A8A-BD0C-EF742F954E0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{99131227-8AC2-4A8A-BD0C-EF742F954E0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{99131227-8AC2-4A8A-BD0C-EF742F954E0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{55EE39FB-909C-434A-9460-427C10940443}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55EE39FB-909C-434A-9460-427C10940443}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{55EE39FB-909C-434A-9460-427C10940443}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{55EE39FB-909C-434A-9460-427C10940443}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
