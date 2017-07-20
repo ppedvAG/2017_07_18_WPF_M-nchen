@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConvertersExample", "Conver
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiValueConverters", "MultiValueConverters\MultiValueConverters.csproj", "{A5A130F1-48AD-43BD-B052-B70A39BF9A0A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PropertyTrigger", "PropertyTrigger\PropertyTrigger.csproj", "{99131227-8AC2-4A8A-BD0C-EF742F954E0F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{A5A130F1-48AD-43BD-B052-B70A39BF9A0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5A130F1-48AD-43BD-B052-B70A39BF9A0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5A130F1-48AD-43BD-B052-B70A39BF9A0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{99131227-8AC2-4A8A-BD0C-EF742F954E0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{99131227-8AC2-4A8A-BD0C-EF742F954E0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{99131227-8AC2-4A8A-BD0C-EF742F954E0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{99131227-8AC2-4A8A-BD0C-EF742F954E0F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
