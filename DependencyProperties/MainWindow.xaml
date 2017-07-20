@@ -5,8 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:p="clr-namespace:DependencyProperties.Properties"
         xmlns:local="clr-namespace:DependencyProperties"
-        mc:Ignorable="d" Height="350" Width="525"
-        Title="{x:Static p:Resources.Title}">
+        mc:Ignorable="d" Height="350" Width="525">
     <StackPanel Margin="50">
         <local:TextLabel Text="Hallo Dependency Properties"
                          FontSize="{Binding ElementName=FontSizeTextBox, Path=Text}"/>

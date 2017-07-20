@@ -1,0 +1,63 @@
+﻿<Window x:Class="Validation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:validation="clr-namespace:Validation.ValidationRules"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Window.Resources>
+        <validation:MustNotBe20ValidationRule x:Key="not20Valdiation" />
+        <validation:MustNotBeLessThan50ValdiationRule x:Key="lessThan50Validation" />
+
+        <Style TargetType="TextBox">
+            <Setter Property="Validation.ErrorTemplate" >
+                <Setter.Value>
+                    <ControlTemplate>
+                        <StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <AdornedElementPlaceholder Name="placeholder" />
+                                <TextBlock Text="!!!" Foreground="Red" FontWeight="Bold" />
+                            </StackPanel>
+
+                            <!--<TextBlock Text="{Binding ElementName=placeholder, Path=AdornedElement.(Validation.Errors)[0].ErrorContent}" 
+                                       Foreground="Red" FontWeight="Bold" />-->
+                            <ItemsControl ItemsSource="{Binding ElementName=placeholder, Path=AdornedElement.(Validation.Errors)}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <TextBlock Text="{Binding ErrorContent}" Foreground="Red" FontWeight="Bold" />
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </StackPanel>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Style.Triggers>
+                <Trigger Property="Validation.HasError" Value="True">
+                    <Setter Property="ToolTip" Value="{Binding RelativeSource={RelativeSource Self}, Path=(Validation.Errors)[0].ErrorContent}" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    
+    <StackPanel Margin="50">
+
+        <Slider Name="mySlider"
+                Minimum="0" Maximum="100" >
+        </Slider>
+
+        <TextBox Margin="0 20 0 0">
+            <TextBox.Text>
+                <Binding ElementName="mySlider" Path="Value" UpdateSourceTrigger="PropertyChanged" >
+                    <Binding.ValidationRules>
+                        <StaticResource ResourceKey="not20Valdiation" />
+                        <StaticResource ResourceKey="lessThan50Validation" />
+                    </Binding.ValidationRules>
+                </Binding>
+            </TextBox.Text>
+        </TextBox>
+
+    </StackPanel>
+</Window>

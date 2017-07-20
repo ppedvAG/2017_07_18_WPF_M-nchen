@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventTrigger", "EventTrigge
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependencyProperties", "DependencyProperties\DependencyProperties.csproj", "{4440F21D-9F31-43ED-98EA-71223C5763E3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validation", "Validation\Validation.csproj", "{14B633B2-8CFA-4E34-AF36-8654EB7DDD95}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -117,6 +119,10 @@ Global
 		{4440F21D-9F31-43ED-98EA-71223C5763E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4440F21D-9F31-43ED-98EA-71223C5763E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4440F21D-9F31-43ED-98EA-71223C5763E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14B633B2-8CFA-4E34-AF36-8654EB7DDD95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14B633B2-8CFA-4E34-AF36-8654EB7DDD95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14B633B2-8CFA-4E34-AF36-8654EB7DDD95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14B633B2-8CFA-4E34-AF36-8654EB7DDD95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
