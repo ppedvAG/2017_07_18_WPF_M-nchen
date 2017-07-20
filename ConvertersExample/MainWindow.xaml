@@ -10,7 +10,7 @@
     <Window.Resources>
         
         <x:Array x:Key="colors" Type="system:String">
-            <system:String>#ff006438</system:String>
+            <system:String>Blue</system:String>
             <system:String>Orange</system:String>
         </x:Array>
         

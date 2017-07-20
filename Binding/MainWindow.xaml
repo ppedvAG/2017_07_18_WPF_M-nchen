@@ -11,7 +11,8 @@
         <ProgressBar Height="20" Margin="0 20 0 0"
                      Value="{Binding ElementName=mySlider, Path=Value}"/>
 
-        <TextBlock Text="{Binding ElementName=mySlider, Path=Value, StringFormat='Mein Text {0:00.00} abc', ConverterCulture=de-DE}"
+        <TextBlock Text="{Binding ElementName=mySlider, Path=Value, 
+                                  StringFormat='Mein Text {0:00.00} abc', ConverterCulture=de-DE}"
                    HorizontalAlignment="Center" Margin="0 8 0 0" />
 
 
