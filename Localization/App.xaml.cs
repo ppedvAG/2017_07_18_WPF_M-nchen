@@ -19,7 +19,7 @@ namespace Localization
         {
             base.OnStartup(e);
 
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo("es-ES");
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("de-DE");
         }
     }
 }

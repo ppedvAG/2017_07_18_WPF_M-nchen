@@ -8,8 +8,10 @@
         mc:Ignorable="d" Height="350" Width="525">
     <StackPanel Margin="50">
         <local:TextLabel Text="Hallo Dependency Properties"
-                         FontSize="{Binding ElementName=FontSizeTextBox, Path=Text}"/>
+                         FontSize="{Binding ElementName=FontSizeSlider, Path=Value}"/>
 
-        <TextBox Name="FontSizeTextBox" Margin="0 20 0 0" />
+        <TextBox Name="FontSizeTextBox" Margin="0 20 0 0" Text="{Binding ElementName=FontSizeSlider, Path=Value}" />
+
+        <Slider Name="FontSizeSlider" Minimum="0" Maximum="100" />
     </StackPanel>
 </Window>
