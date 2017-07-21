@@ -4,7 +4,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:HalloMVVM.ViewModels"
-        mc:Ignorable="d"
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+        mc:Ignorable="d" 
         Title="MainWindow" Height="350" Width="525">
     <Window.DataContext>
         <vm:MainWindowViewModel />
@@ -13,6 +14,12 @@
         <KeyBinding Key="C" Modifiers="Ctrl+Alt+Shift"
                     Command="{Binding ChangeTextCommand}" />
     </Window.InputBindings>
+
+    <i:Interaction.Triggers>
+        <i:EventTrigger EventName="Loaded">
+            <i:InvokeCommandAction Command="{Binding ChangeTextCommand}" />
+        </i:EventTrigger>
+    </i:Interaction.Triggers>
     
     <StackPanel Margin="50">
 

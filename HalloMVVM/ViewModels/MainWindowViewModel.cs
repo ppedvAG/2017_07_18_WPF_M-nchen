@@ -7,7 +7,7 @@ namespace HalloMVVM.ViewModels
     {
         // In ViewModels ObservableCollection<T> statt List<T>
 
-        private string _welcomeText = "Hallo MVVM";
+        private string _welcomeText = "<10Zeic";
         public string WelcomeText
         {
             get { return _welcomeText; }
